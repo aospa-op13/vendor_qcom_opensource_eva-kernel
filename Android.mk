@@ -1,5 +1,5 @@
 ENABLE_EVA_KERNEL := false
-ifeq ($(TARGET_KERNEL_DLKM_DISABLE), true)
+ifneq ($(TARGET_KERNEL_DLKM_DISABLE), true)
 ifeq ($(TARGET_KERNEL_DLKM_EVA_OVERRIDE), true)
 ENABLE_EVA_KERNEL := true
 endif
